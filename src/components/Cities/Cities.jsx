@@ -4,8 +4,8 @@ import "./Cities.css";
 import citiesData from "../../data/countries+states+cities.json";
 
 export default function Cities({ selectedState, selectedCountry }) {
-  console.log(citiesData, "CitiesData");
-  console.log(selectedState, "selectedState");
+  //   console.log(citiesData, "CitiesData");
+  //   console.log(selectedState, "selectedState");
 
   const indexOfCountry = citiesData?.findIndex(
     (elm) => elm.name === selectedCountry
@@ -29,6 +29,10 @@ export default function Cities({ selectedState, selectedCountry }) {
     });
   });
 
+  const mouseEnterOnCityName = (cityObj) => {
+    console.log(cityObj, "cityObj");
+  };
+
   return (
     <div className="citie-container">
       <div className="heading-sm citie-header">Cities</div>
@@ -45,7 +49,12 @@ export default function Cities({ selectedState, selectedCountry }) {
           ? citiesData[indexOfCountry].states[indexOfState].cities.map(
               (city, i) => {
                 return (
-                  <div key={i} className={`city-name`}>
+                  <div
+                    key={i}
+                    className={`city-name`}
+                    title={`City Name: ${city.name}`}
+                    onMouseEnter={() => mouseEnterOnCityName(city)}
+                  >
                     {city.name}
                   </div>
                 );

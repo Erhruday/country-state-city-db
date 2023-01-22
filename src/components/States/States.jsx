@@ -43,6 +43,7 @@ export default function States({
               key={i}
               className={`state-name ${selectedState === itm.name && "active"}`}
               onClick={() => setSelectedState(itm.name)}
+              title={`State Name: ${itm.name}`}
             >
               {itm.name}
             </div>
