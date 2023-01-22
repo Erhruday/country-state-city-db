@@ -1,0 +1,26 @@
+.state-container {
+  width: 100%;
+  border: 1px solid rgb(156, 156, 156);
+  border-radius: 5px;
+}
+.state-header {
+  text-align: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(156, 156, 156);
+}
+.state-search-result-wrapper {
+  padding: 0 15px;
+  margin: 20px 0;
+}
+.state-name {
+  padding: 10px 0 10px 5px;
+  cursor: pointer;
+}
+.state-name:hover {
+  background-color: aquamarine;
+  color: black;
+}
+.active {
+  background-color: rgb(30, 138, 102);
+  color: whitesmoke;
+}

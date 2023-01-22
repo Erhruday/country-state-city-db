@@ -1,0 +1,8 @@
+.header-container {
+  background-color: rgb(58, 137, 248);
+  padding: 10px 0 10px 20px;
+  color: whitesmoke;
+}
+.header-container h1 {
+  margin: 0;
+}
